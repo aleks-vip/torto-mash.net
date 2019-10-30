@@ -1,0 +1,164 @@
+body {
+	font-family: Roboto Slab, serif;
+	font-feature-settings: normal;
+	padding: 0;
+	margin: 0;
+}
+div{
+	box-sizing: border-box;
+}
+/*класс для флоутов что бы элементы не залезали на блоки*/
+.clearfix:after{
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+header{
+	background: #ccb1ce 100%;
+}
+.logo{
+	margin-top:32px;
+	margin-bottom: 31px;
+	margin-left:0px ;
+	float: left;
+}
+
+nav{
+	float: left;
+	overflow: hidden;
+	margin-top: 62px;
+	margin-left: 240px;
+	margin-right:250px; 
+}
+.menu{
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.menu li {
+	float: left;
+	display: block;
+	margin-right: 19px;
+}
+.menu li a {
+	position: relative;
+  	color: #d70d84;
+  	text-decoration: none; /*убирем подчёркивание у ссылки*/
+	text-transform: uppercase;
+	font-size: 15px;
+}
+/*--------------------------------------*/
+/*анимация подчёркивания пунктов главного меню*/
+.menu li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d70d84;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+/*применение выше описаных свойств в псевдокласе*/
+.menu li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*-----------------------------*/
+.social{
+	padding-top: 50px;
+}
+.social a {
+	margin-left: 20px;
+}
+
+/*----------Секция---------------------*/
+.thanks{
+	font-size: 43px;
+	 font-weight:normal; 
+}
+.card{
+	height: 317px;
+	position: relative;
+	margin-top: 23px;
+	margin-left: 30px;
+	float: left;
+	border-radius: 7px;
+	box-shadow: 2px 2px 5px  rgba(1,0.5,0,0.6);
+	
+}
+.card img{
+	width: 270px;
+	height: 318px;
+	
+}
+.overlei p{
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 0px;
+	text-decoration: none;
+
+}
+/*Линия у ссылки*/
+.lain{
+	margin-top: 3px;
+	margin-left: 70px;
+	width:130px;
+	height:3px;
+	background: #fff;
+}/*----------------*/
+
+.for_the_holidays{
+	z-index: 1;
+}
+.overlei{
+	background: rgba(0,0,0,0.6);
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 100%;
+	text-align:center;
+	padding-top: 149px;
+	opacity: 0;/*Прозрачность равна нулю*/
+	transition: all ease 3s;/*время появления затемнения*/
+}
+.card:hover .overlei{
+	opacity: 1;/*Прозрачность равна 1 при наведении*/
+}
+
+.center{
+	margin-left: 137px;
+}
+/*-----Футер------*/
+.footer {
+  margin-top: 35px;
+  background: #000 100%;
+}
+.footer p,a{
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.footer a{
+text-decoration: none; /*убирем подчёркивание у ссылки*/
+}
+.condition_of_use{
+  margin-left: 349px;
+  text-transform: uppercase;
+}
+.padingi{
+  padding-top: 52px;
+  padding-bottom: 58px;
+}

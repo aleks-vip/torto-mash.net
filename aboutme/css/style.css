@@ -1,0 +1,311 @@
+body {
+	font-family: Roboto Slab, serif;
+	font-feature-settings: normal;
+	padding: 0;
+	margin: 0;
+}
+div{
+	box-sizing: border-box;
+}
+/*класс для флоутов что бы элементы не залезали на блоки*/
+.clearfix:after{
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+header{
+	background: #ccb1ce 100%;
+}
+.logo{
+	margin-top:32px;
+	margin-bottom: 31px;
+	margin-left:0px ;
+	float: left;
+}
+
+nav{
+	float: left;
+	overflow: hidden;
+	margin-top: 62px;
+	margin-left: 240px;
+	margin-right:250px; 
+}
+.menu{
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.menu li {
+	float: left;
+	display: block;
+	margin-right: 19px;
+}
+.menu li a {
+	position: relative;
+  	color: #d70d84;
+  	text-decoration: none; /*убирем подчёркивание у ссылки*/
+	text-transform: uppercase;
+	font-size: 15px;
+}
+/*--------------------------------------*/
+/*анимация подчёркивания пунктов главного меню*/
+.menu li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d70d84;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+/*применение выше описаных свойств в псевдокласе*/
+.menu li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*-----------------------------*/
+.social{
+	padding-top: 50px;
+}
+.social a {
+	margin-left: 20px;
+}
+#mainmenu {
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    height: 32px;
+    margin-top: 25px ;
+}
+#mainmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    float: left;
+    height: 32px
+}
+#mainmenu ul li {
+    position: relative;
+    left: -50%;
+    float: left;
+    margin: 0 14px;
+    height: 32px
+}
+#mainmenu ul li a {
+    color: #331226;
+    display: block;
+    text-decoration: none;
+    line-height: 40px;
+}
+/*Смена цвета ссылок меню при наведении*/
+/*анимация подчёркивания пунктов главного меню*/
+#mainmenu li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d70d84;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+/*применение выше описаных свойств в псевдокласе*/
+#mainmenu li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*-----------------------------*/
+#mainmenu ul li a:hover {
+   color: #d70d84;	
+}
+.card{
+  color: #fff !important;
+  height: 450px;
+  position: relative;
+  margin-top: 23px;
+  margin-left: 145px;
+  float: left;
+  border-radius: 7px;
+  box-shadow: 2px 2px 5px  rgba(1,0.5,0,0.5);
+}
+.card2{
+  float: right;
+  margin-left: 0px !important;
+  margin-right: 145px;
+}
+.card img{
+  width: 450px;
+  height: 450px;
+}
+.overlei p{
+  color: #fff;
+  font-size: 18px;
+ 
+
+}
+/*Линия у ссылки*/
+.lain{
+  margin-top: 3px;
+  margin-left: 70px;
+  width:130px;
+  height:3px;
+  background: #fff;
+}/*----------------*/
+
+.overlei{
+  background: rgba(0,0,0,0.42);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  text-align:center;
+  padding-top: 149px;
+  opacity: 1;/*Прозрачность равна нулю*/
+  transition: all ease 3s;/*время появления затемнения*/
+}
+
+
+
+.history{
+  float: left;
+  padding-top: 50px;
+}
+.history h2{
+ /* color: #d70d84;*/
+  font-weight: normal;
+  font-size: 40px;
+  width: 500px;
+  margin: 0px 0px 24px 0px;
+}
+.line{
+    border: none; /* Убираем границу */
+    background-color: red; /* Цвет линии */
+    color: red; /* Цвет линии для IE6-7 */
+    width: 100px;
+    height: 2px; /* Толщина линии */
+   }
+.history p{
+ /* color: #d70d84;*/
+  font-size: 16px;
+  width: 500px;
+  line-height: 1.5;
+}
+.history a{
+  font-size: 16px;
+color: blue;
+}
+.indent{
+  padding: 90px 0px 45px 45px;
+}
+
+
+.maria img{
+width: 560px;
+height: 560px;
+padding-left: 80px;
+}
+/*---------------Секция----------------------*/
+
+.fon{
+color: #fff;
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+ url(../img/tort.png);
+  -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+       background-size: cover;
+        height: 400px;
+  min-width: 960px;
+}
+.holiday{
+  padding-top: 80px;
+  text-align: center;
+  color:#FFF;
+}
+.holiday h3{
+  font-size: 36px;
+  margin: 0px 0px 25px 0px;
+}
+.holiday p{
+  font-size: 20px;
+  margin: 0px 0px 25px 0px;
+}
+.button{
+  background: #d70d84;
+  color: #fefefe;
+  border-radius: 7px;
+  display: block;
+  width: 170px;
+  padding: 15px 0px;
+ margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+   box-shadow: 1px 1px 1px  rgba(215,13,132,74);
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.6); /* Тень */
+}
+.button:active {
+  box-shadow: 0px 0px 0px rgba(215,10,132,74); 
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.6); /* Тень при нажатии*/
+ }
+
+/*-------------------------------------------*/
+
+/*---------------Секция----------------------*/
+.header{
+  text-align: center;
+}
+.header h2{
+  padding-top: 20px;
+}
+.line1{
+  margin: 0 auto;
+}
+
+
+/*-------------------------------------------*/
+
+/*-----Футер------*/
+.footer {
+  margin-top:40px;
+  background: #000 100%;
+}
+.footer p,a{
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.footer a{
+text-decoration: none; /*убирем подчёркивание у ссылки*/
+}
+.condition_of_use{
+  margin-left: 349px;
+  text-transform: uppercase;
+}
+.padingi{
+  padding-top: 52px;
+  padding-bottom: 58px;
+}
+
+

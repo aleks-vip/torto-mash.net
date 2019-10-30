@@ -1,0 +1,177 @@
+body {
+	font-family: Roboto Slab, serif;
+	font-feature-settings: normal;
+	padding: 0;
+	margin: 0;
+}
+div{
+	box-sizing: border-box;
+}
+/*класс для флоутов что бы элементы не залезали на блоки*/
+.clearfix:after{
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+header{
+	background: #ccb1ce 100%;
+}
+.logo{
+	margin-top:32px;
+	margin-bottom: 31px;
+	margin-left:0px ;
+	float: left;
+}
+
+nav{
+	float: left;
+	overflow: hidden;
+	margin-top: 62px;
+	margin-left: 240px;
+	margin-right:250px; 
+}
+.menu{
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.menu li {
+	float: left;
+	display: block;
+	margin-right: 19px;
+}
+.menu li a {
+	position: relative;
+  	color: #d70d84;
+  	text-decoration: none; /*убирем подчёркивание у ссылки*/
+	text-transform: uppercase;
+	font-size: 15px;
+}
+/*--------------------------------------*/
+/*анимация подчёркивания пунктов главного меню*/
+.menu li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d70d84;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+/*применение выше описаных свойств в псевдокласе*/
+.menu li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*-----------------------------*/
+.social{
+	padding-top: 50px;
+}
+.social a {
+	margin-left: 20px;
+}
+/*----------Секция---------------------*/
+.section2 {
+	text-align: center;
+}
+.section2 a{
+	font-size: 25px;
+	color: #d70d84;
+	text-decoration: none;
+	margin-top: 10px;
+}
+.section2 h2{
+	color: #d70d84;
+ 	font-weight: bold;
+ 	text-align: center;
+ 	font-size: 36px;
+}
+.nomer_telefona img {
+	float: left;
+	margin-top: 24px;
+	margin-right: 25px;
+}
+.nomer_telefona h3 {
+	font-size: 25px;
+	color: #d70d84;
+	margin:0px; 
+}
+.nomer_telefona p{
+	font-size: 25px;
+	color: #d70d84;
+	margin: 10px 0px 0px 0px;
+}
+
+.contact_email img{
+	float: left;
+	float: left;
+	margin-top: 24px;
+	margin-right: 25px;
+}
+.contact_email h3{
+	font-size: 25px;
+	color: #d70d84;
+	margin:63px 0px 10px 0px; 
+}
+.contact_email  p {
+	font-size: 25px;
+	color: #d70d84;
+	margin: 0px 0px 0px 0px;
+}
+.contact_email  a{
+
+	font-size: 25px;
+	color: #d70d84;
+	margin: 0px 0px 0px 0px;
+}
+.soceti{
+	margin-top: 65px;
+ 	margin-left: 872px;
+}
+.VKCOM {
+	float: left;
+	margin-right: 24px;
+}
+
+
+
+
+
+
+
+
+/*-----Футер------*/
+.footer {
+  margin-top: 35px;
+  background: #000 100%;
+}
+.footer p,a{
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.footer a{
+text-decoration: none; /*убирем подчёркивание у ссылки*/
+}
+.condition_of_use{
+  margin-left: 349px;
+  text-transform: uppercase;
+}
+.padingi{
+  padding-top: 52px;
+  padding-bottom: 58px;
+}
+
+

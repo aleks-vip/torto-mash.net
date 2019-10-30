@@ -1,0 +1,454 @@
+body {
+	font-family: Roboto Slab, serif;
+	font-feature-settings: normal;
+	padding: 0;
+	margin: 0;
+}
+div{
+	box-sizing: border-box;
+}
+/*класс для флоутов что бы элементы не залезали на блоки*/
+.clearfix:after{
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+header{
+	background: #ccb1ce 100%;
+}
+.logo{
+	margin-top:32px;
+	margin-bottom: 31px;
+	margin-left:0px ;
+	float: left;
+}
+
+nav{
+	float: left;
+	overflow: hidden;
+	margin-top: 62px;
+	margin-left: 240px;
+	margin-right:250px; 
+}
+.menu{
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.menu li {
+	float: left;
+	display: block;
+	margin-right: 19px;
+}
+.menu li a {
+	position: relative;
+  	color: #d70d84;
+  	text-decoration: none; /*убирем подчёркивание у ссылки*/
+	text-transform: uppercase;
+	font-size: 15px;
+}
+/*--------------------------------------*/
+/*анимация подчёркивания пунктов главного меню*/
+.menu li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d70d84;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+/*применение выше описаных свойств в псевдокласе*/
+.menu li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*-----------------------------*/
+.social{
+	padding-top: 50px;
+}
+.social a {
+	margin-left: 20px;
+}
+#mainmenu {
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    height: 32px;
+    margin-top: 25px ;
+}
+#mainmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    float: left;
+    height: 32px
+}
+#mainmenu ul li {
+    position: relative;
+    left: -50%;
+    float: left;
+    margin: 0 14px;
+    height: 32px
+}
+#mainmenu ul li a {
+    color: #331226;
+    display: block;
+    text-decoration: none;
+    line-height: 40px;
+}
+/*Смена цвета ссылок меню при наведении*/
+/*анимация подчёркивания пунктов главного меню*/
+#mainmenu li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d70d84;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+/*применение выше описаных свойств в псевдокласе*/
+#mainmenu li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*-----------------------------*/
+#mainmenu ul li a:hover {
+   color: #d70d84;	
+}
+.single-goods {
+    height: 317px;
+  position: relative;
+  margin-top: 23px;
+  margin-left: 30px;
+  float: left;
+  border-radius: 7px;
+  box-shadow: 2px 2px 5px  rgba(1,0.5,0,0.6);
+}
+.razmer {
+  width: 270px;
+  height: 318px;
+}
+.overlei p{
+  color: #fff;
+  font-size: 18px;
+  margin:0px;
+}
+.overlei a{
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+
+}
+/*Линия у ссылки*/
+.lain{
+  margin-top: 3px;
+  margin-left: 70px;
+  width:130px;
+  height:3px;
+  background: #fff;
+}/*----------------*/
+.overlei{
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  text-align:center;
+  padding-top: 140px;
+  opacity: 0;/*Прозрачность равна нулю*/
+  transition: all ease 2s;/*время появления затемнения*/
+}
+.single-goods:hover .overlei{
+  opacity: 1;/*Прозрачность равна 1 при наведении*/
+}
+
+/* свойства модального окна по умолчанию */
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+    pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 960px;
+      margin: 30px auto; /* для отображения модального окна по центру */
+  }
+}
+
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+   background: url(../img/fon.jpg) ;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 5px 15px 0px 15px;
+}
+
+.modal-header h3{
+  font-weight:bold;
+    font-size: 25px;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+    top: 10px;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+.img_forma{
+  width: 245px;
+  height: 288px;
+  margin-right: 10px;
+  float: left;
+}
+.modal-body h4{
+  font-size: 24px;
+  margin-bottom:0px;
+  margin-top: 0px;
+}
+.text p{
+    font-size: 18px;
+}
+#text_change{
+  font-size: 25px;
+  font-weight:bold;
+  margin:0px 690px 3px  5px;
+}
+/*стили для инпута*/
+.input_width{
+  width: 200px;
+    border: 3px solid #d70d84;
+    border-radius: 5px;
+    padding: 8px 5px;
+    margin-right: 10px;
+}
+/*стиль для кнопки*/
+
+.botn_stil{
+  color: #ffffff;
+  background: #d70d84;
+  border: none; 
+  outline: none;
+  border-radius: 7px;
+  display: block;
+  width: 150px;
+  padding: 10px 0px;
+    
+  text-align: center;
+  text-decoration: none;
+  
+  font-size: 15px;
+    box-shadow: 1px 1px 1px  rgba(215,13,132,74);
+   box-shadow: 2px 3px 5px rgba(0,0,0,0.6); /* Тень */
+}
+.botn_stil:active {
+  box-shadow: 0px 0px 0px rgba(210,10,132,74); 
+     box-shadow: 1px 2px 5px rgba(0,0,0,0.6); /* Тень при нажатии*/
+ }
+
+  .pozicia{
+   position: absolute;
+    right: 82px;
+    bottom: 130px;
+  }
+
+ /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+ .soglasie{
+  margin-left:300px;
+   font-size: 10px
+}
+.ssilka-color {
+  color: #1d1df4;
+  font-size: 10px;
+}
+.centr{
+  text-align: center;
+}
+.p_text{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.namder{
+  font-size: 24px;
+  /*font-weight: bold;*/
+  margin:0px;
+}
+
+
+
+
+#modal_form {
+  width: 700px; 
+  height: 600px; /* Рaзмеры дoлжны быть фиксирoвaны */
+  border-radius: 5px;
+  border: 3px #000 solid;
+  background: #fff;
+  position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+  left: 50%; /* пoлoвинa экрaнa слевa */
+  margin-top: -280px;
+  margin-left: -350px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+  overflow: auto;
+  display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 20px 10px;
+
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+#modal_form #modal_close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+  z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+  position:fixed; /* всегдa перекрывaет весь сaйт */
+  background-color:#000; /* чернaя */
+  opacity:0.8; /* нo немнoгo прoзрaчнa */
+  -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+  filter:alpha(opacity=80);
+  width:100%; 
+  height:100%; /* рaзмерoм вo весь экрaн */
+  top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left:0;
+  cursor:pointer;
+  display:none; /* в oбычнoм сoстoянии её нет) */
+}
+
+/*-----Футер------*/
+.footer {
+  margin-top: 25px;
+  background: #000 100%;
+}
+.footer p,a{
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.footer a{
+text-decoration: none; /*убирем подчёркивание у ссылки*/
+}
+.condition_of_use{
+  margin-left: 349px;
+  text-transform: uppercase;
+}
+.padingi{
+  padding-top: 52px;
+  padding-bottom: 58px;
+}

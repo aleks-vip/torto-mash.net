@@ -1,0 +1,1115 @@
+body {
+	/*font-family: Roboto Slab, serif;*/
+	font-family: Rubik, sans-serif;
+	font-feature-settings: normal;
+	padding: 0;
+	margin: 0;
+}
+div{
+	box-sizing: border-box;
+}
+/*класс для флоутов что бы элементы не залезали на блоки*/
+.clearfix:after{
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+header{
+	width: 100%;
+	background: url(../img/First.png) 
+	no-repeat center top / cover; 
+	
+	min-width: 960px;
+	padding-bottom: 190px;
+	position: relative;
+	z-index: 1;
+}
+.logo{
+	margin-top:17px;
+	margin-left:0px ;
+	float: left;
+}
+
+nav{
+	float: left;
+	overflow: hidden;
+	margin-top: 42px;
+	margin-left: 240px;
+	margin-right:250px; 
+}
+.menu{
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.menu li {
+	float: left;
+	display: block;
+	margin-right: 25px;
+}
+.menu li a {
+	position: relative;
+  	color: #d70d84;
+  	text-decoration: none; /*убирем подчёркивание у ссылки*/
+	text-transform: uppercase;
+	font-size: 15px;
+}
+/*--------------------------------------*/
+/*анимация подчёркивания пунктов главного меню*/
+.menu li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d70d84;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+/*применение выше описаных свойств в псевдокласе*/
+.menu li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*-----------------------------*/
+.social{
+	padding-top: 32px;
+}
+.social a {
+	margin-left: 20px;
+}
+h1 {
+		color: #d70d84;
+		font-weight: normal;
+		text-transform: uppercase;
+		font-size: 60px;
+		margin-left:431px;
+		margin-top:  120px;
+		margin-bottom: 0px;
+}
+
+.tortomahs div {
+	color: #d70d84;
+	font-size: 36px;
+
+}
+.order{
+	margin-left: 657px;
+}
+.deliciously{
+	margin-left: 836px;
+}
+.tortomahs{
+
+		opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+		transition: 1s; /*Скорость перехода состояния элемента*/
+	
+		animation: show 3s 1; /* Указываем название анимации, её время и количество повторов*/
+		animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+  		animation-delay: 1s; /* Задержка перед началом */
+}
+@keyframes show{
+	 0%{
+		 opacity:0;
+	 }
+	 100% {
+		 opacity:1;
+	 }
+}
+.button_menu{
+	background: #d70d84;
+	color: #fefefe;
+	border-radius: 7px;
+	display: block;
+	width: 170px;
+	padding: 15px 0px;
+	margin-top: 150px;
+	margin-left: 190px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 15px;
+	 box-shadow: 1px 1px 1px  rgba(215,13,132,74);
+	box-shadow: 2px 3px 5px rgba(0,0,0,0.6); /* Тень */
+}
+.button_menu:active {
+	box-shadow: 0px 0px 0px rgba(215,10,132,74); 
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.6); /* Тень при нажатии*/
+ }
+ /*------------Второй блок-------------------------*/
+.bootom{
+	position: relative;
+	z-index: 2;
+	margin: -34.7px 0px 0px 350px;
+	
+}
+h2{
+	color: #d70d84;
+		font-weight: normal;
+		text-align: center;
+		font-size: 36px;
+		margin-top: 10px;
+		margin-bottom: 50px;
+}
+.fillings {
+	width: 260px;
+	height: 225px;
+	margin-left: 143px;
+	position: absolute;
+}
+.text_p p {
+	text-align: center;
+	color: #d70d84;
+	font-size: 16px;
+}
+.img1{
+	margin-left: 40px;
+}
+.cake{
+	width: 260px;
+	height: 225px;
+	position: absolute;
+	margin-left: 470px;
+	margin-top: 120px;
+}
+.hands{
+	width: 260px;
+	height: 225px;
+	margin-left: 830px;
+}
+.img2{
+	margin-left: 40px;
+}
+.product{
+	width: 260px;
+	height: 225px;
+	margin-top: 53px;
+	margin-left: 143px;
+	position: absolute;
+}
+.img3{
+	margin-left: 40px;
+}
+.product p{
+	text-align: center;
+}
+.sponge {
+	width: 260px;
+	height: 225px;
+	margin-top: 53px;
+	margin-left: 830px;
+}
+.detailed{
+	width: 140px;
+	height: 
+}
+.detailed img{
+	margin-top: 56px;
+	margin-left: 357px;
+}
+.detailed a{
+	margin-left: 545px;
+	color: #d70d84;
+	font-size: 24px;
+	text-decoration: none;
+}
+.detailed ul li a{
+	text-transform: capitalize;
+	font-size: 24px;
+}
+
+.detailed {
+	margin-bottom: 80px;
+}
+/*--------------Третий блок---------------------------*/
+/*Растягиваем изоброжение небо на весь экран и закрепляем его*/
+.work{
+	background: url(../img/nebo.jpg) 
+	  no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+       background-size: cover;
+	position: relative;
+	z-index:1;
+	height: 1020px;
+	min-width: 960px;
+}
+
+.work_menu h2{
+	margin:0;
+	padding-top: 66px;
+	font-size: 36px;
+}
+
+#mainmenu {
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    height: 32px;
+    margin-top: 25px ;
+}
+#mainmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    float: left;
+    height: 32px
+}
+#mainmenu ul li {
+    position: relative;
+    left: -50%;
+    float: left;
+    margin: 0 14px;
+    height: 32px
+}
+#mainmenu ul li a {
+    color: #331226;
+    display: block;
+    text-decoration: none;
+    line-height: 40px;
+}
+/*Смена цвета ссылок меню при наведении*/
+/*анимация подчёркивания пунктов главного меню*/
+#mainmenu li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d70d84;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+/*применение выше описаных свойств в псевдокласе*/
+#mainmenu li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*-----------------------------*/
+#mainmenu ul li a:hover {
+   color: #d70d84;	
+}
+
+
+.ware{
+	margin-left: 130px;
+	margin-top: 12px;
+}
+#for_the_holidays{
+	position: relative;
+	z-index: 1;
+}
+.blok{
+	position: absolute;
+	opacity: 0;
+	z-index: 0;
+}
+
+.card{
+	height: 317px;
+	position: relative;
+	margin-top: 23px;
+	margin-left: 30px;
+	float: left;
+	border-radius: 7px;
+	box-shadow: 2px 2px 5px  rgba(1,0.5,0,0.6);
+	
+}
+
+.overlei a{
+	color: #fff;
+	font-size: 18px;
+	text-decoration: none;
+
+}
+/*Линия у ссылки*/
+.lain{
+	margin-top: 3px;
+	margin-left: 70px;
+	width:130px;
+	height:3px;
+	background: #fff;
+}/*----------------*/
+
+.for_the_holidays{
+	z-index: 1;
+}
+.overlei{
+	background: rgba(0,0,0,0.6);
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 100%;
+	text-align:center;
+	padding-top: 149px;
+	opacity: 0;/*Прозрачность равна нулю*/
+	transition: all ease 3s;/*время появления затемнения*/
+}
+.card:hover .overlei{
+	opacity: 1;/*Прозрачность равна 1 при наведении*/
+}
+
+.catalogue{
+	position: relative;
+	background: #d70d84;
+	/*color: #ffff;*/
+	border-radius: 7px;
+	display: block;
+	width: 170px;
+	padding: 15px 0px;
+	margin-top: 36px;
+	margin-left: 504px;
+	margin-bottom: 70px;
+	text-align: center;
+	text-decoration: none;
+	
+	font-size: 15px;
+	  box-shadow: 1px 1px 1px  rgba(215,13,132,74);
+	 box-shadow: 2px 3px 5px rgba(0,0,0,0.6); /* Тень */
+}
+.catalogue:active {
+	box-shadow: 0px 0px 0px rgba(215,13,132,74); 
+   box-shadow: 1px 2px 5px rgba(0,0,0,0.6); /* Тень при нажатии*/
+ }
+
+		/* свойства модального окна по умолчанию */
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 670px;
+      margin: 30px auto; /* для отображения модального окна по центру */
+  }
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+	background: url(../img/zvonok5.png) ;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #f01897;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+	color: #000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #c55ec1;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+	color: #fff;
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}	
+
+.input_width{
+	width: 200px;
+}
+.otstup{
+	margin-left: 10px;
+}
+.zvonok{
+	color: #000;
+}
+.ssilka-color {
+	color: #1d1df4;
+	font-size: 10px;
+}
+.soglasie{
+	font-size: 10px
+}
+
+.botn_zvonok{
+	color: #ffff;
+	background: #d70d84;
+	border: none;
+	outline: none;
+	border-radius: 7px;
+	display: block;
+	width: 150px;
+	padding: 10px 0px;
+		
+	text-align: center;
+	text-decoration: none;
+	
+	font-size: 15px;
+	   box-shadow: 1px 1px 1px  rgba(215,13,132,74);
+	box-shadow: 2px 3px 5px rgba(0,0,0,0.6); /* Тень */
+}
+.button_zvonok:active {
+	box-shadow: 0px 0px 0px rgba(215,10,132,74); 
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.6); /* Тень при нажатии*/
+ }
+ /*------Четвёртый блок-----------------*/
+ .idea h2{
+ 	font-size: 36px;
+ 	margin-bottom: 0px;
+ 	margin-top: 68px;
+ }
+ .idea h3{
+ 	color: #d70d84;
+ 	font-size: 25px;
+ 	margin-top: 0px;
+ 	font-weight: normal;
+		text-align: center;
+ }
+
+ .phone{
+display:inline-block;
+position:relative;
+
+}
+.phone span {
+display:inline-block;
+position:absolute;
+text-align: center;
+top:-635px;
+left:-635px;
+
+/* Оформление текста */
+color:#d70d84;
+font-size:18px;
+}
+
+.whatsapp{
+	display:inline-block;
+	position:relative;
+}
+.whatsapp span{
+	display:inline-block;
+position:absolute;
+text-align: center;
+top:-585px;
+left:-284px;
+
+/* Оформление текста */
+color:#d70d84;
+font-size:18px;
+}
+.communication{
+	display:inline-block;
+	position:relative;
+}
+.communication span{
+	display:inline-block;
+position:absolute;
+text-align: center;
+top:-318px;
+left:-254px;
+
+/* Оформление текста */
+color:#d70d84;
+font-size:18px;
+}
+.application{
+	position:absolute;
+	top: 3450px;
+	margin-left: 650px;;
+	background: #d70d84;
+	color: #ffff;
+	border-radius: 7px;
+	display: block;
+	width: 170px;
+	padding: 15px 0px;
+
+	text-align: center;
+	text-decoration: none;
+	
+	font-size: 15px;
+	  box-shadow: 1px 1px 1px  rgba(215,13,132,74);
+	 box-shadow: 2px 3px 5px rgba(0,0,0,0.6); /* Тень */
+}
+.catalogue:active {
+	box-shadow: 0px 0px 0px rgba(215,13,132,74); 
+   box-shadow: 1px 2px 5px rgba(0,0,0,0.6); /* Тень при нажатии*/
+ }
+
+ 	/* свойства модального окна по умолчанию */
+.modal1 {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal1:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog1 {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog1 {
+      max-width: 670px;
+      margin: 30px auto; /* для отображения модального окна по центру */
+  }
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content1 {
+	background: url(../img/zvonok5.png) ;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #f01897;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-content1 {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* свойства для заголовка модального окна */
+.modal-header1 {
+	color: #000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+.modal-title1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #c55ec1;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close1:focus, .close1:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+	color: #fff;
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}	
+ /*----Пятый блок------------*/
+.casting{
+	background: #f5d4e8 100%;
+}
+.casting p{
+	color: #d70d84;
+	font-size: 18px;
+}
+.easily h2{
+	margin-top: 0px;
+	padding-top: 69px;
+}
+.telephone {
+	margin-left: 150px;
+}
+.telephone img{
+	float: left;
+}
+.telephone p{
+	margin-left:86px;
+}
+.dialogue{
+	margin-top: 32px;
+	margin-left: 500px;
+
+}
+.dialogue p{
+	text-align: right;
+	margin-right:29px;
+	float: left;
+}
+.cook{
+	margin-top: 50px;
+	margin-left: 150px;
+}
+.cook img{
+	float:left;
+}
+.cook p{
+	padding-top: 27px;
+	margin-left: 90px;
+}
+.piece{
+	margin-left: 530px;
+	margin-top: 50px;
+}
+.piece p{
+ text-align: right;
+ margin-right: 43px;
+ float: left;
+}
+.pie{
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 0px;
+	padding-bottom: 64px;
+}
+/*-----Шестой блок----*/
+.pink{
+	background: #fbbdca 100%;
+}
+.reviews_of_happy h2{
+	font-size: 36px;
+	margin-top: 0px;
+	padding-top: 69px;
+}
+.slider{
+	margin-left: 0px;
+}
+.rectangle {
+    background: #fff;
+    position: relative;
+    width: 1000px; 
+    height: 415px;
+    border-left: 2px solid #d70d84;
+      border-right: 2px solid #d70d84;
+        border-bottom: 2px solid #d70d84;
+          border-top: 2px solid #d70d84;
+          box-shadow: 0 0 7px #666; /* Параметры тени */
+   }
+  /* .rectangle::after {
+ content: ' ';
+    display: block;
+    background: red;
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 362px;
+    left: 650px;
+    background: #fff;
+    border-bottom: 2px solid #d70d84;
+    border-right: 2px solid #d70d84;
+    background-clip: padding-box;
+
+   }*/
+.margin {
+	padding-bottom:40px;
+}
+.foto {
+	width: 329px;
+	height: 384px;
+	margin-top: 12px;
+	margin-left: 12px;
+	float: left;
+}
+.content{
+	margin-left: 370px;
+	color: #d70d84;
+	
+}
+.content h4{
+	font-size: 24px;
+	margin-bottom: 0px;
+	margin-top:21px;
+		font-weight: normal;
+}
+.content a{
+	font-size: 18px;
+	/*text-decoration: none;*/
+	color: #0d17d7;
+}
+/*.lain3{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 30px;
+	width: 207px;
+	height:2px;
+	background: #898ce6;
+}*/
+.content p{
+	font-size: 18px;
+	width: 601px;
+	height: 220px;
+}
+.clientele{
+	margin-top: 78px;
+	margin-left: 60px;
+}
+.your-class, .slick-initialized, .slick-slider {
+	width: 1000px;
+	margin-left: 100px;
+}
+.button_otziv{
+	width: 200px;
+	text-transform: none;
+	font-size: 20px;
+	margin-top:0px;
+	margin-left: 400px;
+	margin-bottom: 0px;
+	font-size: 15px;
+	float: left; 
+}
+.button_otziv2{
+	width: 200px;
+	text-transform: none;
+	font-size: 20px;
+	margin-top:50px;
+	margin-left: 630px;
+		margin-bottom: 0px;
+		font-size: 15px;
+}
+.knopki_otzivov{
+	margin-top: 57px;
+	padding-bottom: 67px;
+}
+/*---Шестой блок---*/
+.still_have_questions{
+	margin-top: 67px;
+}
+.section1 {
+	float: left;
+	width: 800px;
+	padding-left: 30px;
+}
+
+.section1 h2 {
+	text-align: left;
+	margin:0px;
+	font-weight: normal;
+}
+.section1 p {
+	text-align: left;
+	margin:25px;
+	color: #d70d84;
+	margin:0px 0px 14px 0px;
+}
+
+.form_text{
+	width: 563px;
+	height: 284px;
+	padding-top: 20px;
+	 resize: none; /* Запрещаем изменять размер */
+}
+.section1 input{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.section1 input, textarea {
+    background-color: transparent;
+    color: black;
+    
+}
+input, textarea {
+    padding: 5px;
+    border: 3px solid #d70d84;
+    width: 563px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  outline:none;
+}
+textarea::-webkit-input-placeholder {
+    color: #000;
+    font-size: 14px;
+}
+input::-webkit-input-placeholder {
+    color: #000;
+    font-size: 14px;
+}
+/*---Отключение всех авто свойств у кнопки*/
+button { border: none; outline: none; }
+/*----------------------------------------*/
+.vopros {
+	position: relative;
+	background: #d70d84;
+	
+	border-radius: 7px;
+	display: block;
+	width: 580px;
+	padding: 15px 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	text-decoration: none;
+	 resize: none; 
+	font-size: 15px;
+	font-size: 15px;
+	color: #ffff;
+	  box-shadow: 1px 1px 1px  rgba(215,13,132,74);
+	 box-shadow: 2px 3px 5px rgba(0,0,0,0.6); /* Тень */
+}
+.vopros:active {
+	box-shadow: 0px 0px 0px rgba(215,13,132,74); 
+   box-shadow: 1px 2px 5px rgba(0,0,0,0.6); /* Тень при нажатии*/
+ }
+.personal_data p{
+	margin-top: 20px;
+	width: 570px;
+	font-size: 10px;
+	color: #000;
+	text-align: center;
+}
+.personal_data a{
+	color: #1d1df4;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+#modal_form {
+	width: 700px; 
+	height: 600px; /* Рaзмеры дoлжны быть фиксирoвaны */
+	border-radius: 5px;
+	border: 3px #000 solid;
+	background: #fff;
+	position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+	top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+	left: 50%; /* пoлoвинa экрaнa слевa */
+	margin-top: -280px;
+	margin-left: -350px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+	overflow: auto;
+	display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+	opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+	z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+	padding: 20px 10px;
+
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+#modal_form #modal_close {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+	z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+	position:fixed; /* всегдa перекрывaет весь сaйт */
+	background-color:#000; /* чернaя */
+	opacity:0.8; /* нo немнoгo прoзрaчнa */
+	-moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+	filter:alpha(opacity=80);
+	width:100%; 
+	height:100%; /* рaзмерoм вo весь экрaн */
+	top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+	left:0;
+	cursor:pointer;
+	display:none; /* в oбычнoм сoстoянии её нет) */
+}
+.section2 h2{
+ 	font-weight: bold;
+ 	text-align: left;
+}
+.nomer_telefona img {
+	float: left;
+	margin-top: 24px;
+	margin-right: 25px;
+}
+.nomer_telefona h3 {
+	font-size: 25px;
+	color: #d70d84;
+	margin:0px; 
+}
+.nomer_telefona p {
+	font-size: 25px;
+	color: #d70d84;
+	margin: 10px 0px 0px 0px;
+}
+
+.contact_email img{
+	float: left;
+	float: left;
+	margin-top: 24px;
+	margin-right: 25px;
+}
+.contact_email h3{
+	font-size: 25px;
+	color: #d70d84;
+	margin:63px 0px 0px 0px; 
+}
+.contact_email  p {
+	font-size: 25px;
+	color: #d70d84;
+	margin: 10px 0px 0px 0px;
+}
+.soceti{
+	margin-top: 65px;
+ 	margin-left: 872px;
+}
+.VKCOM {
+	float: left;
+	margin-right: 24px;
+}
+/*-----Футер------*/
+.footer {
+	background: #000 100%;
+}
+.footer p,a{
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+}
+.footer a{
+text-decoration: none; /*убирем подчёркивание у ссылки*/
+}
+.condition_of_use{
+	margin-left: 349px;
+	text-transform: uppercase;
+}
+.padingi{
+	padding-top: 52px;
+	padding-bottom: 58px;
+}
+
